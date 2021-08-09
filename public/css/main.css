@@ -467,7 +467,7 @@ section.note {
 .writer_name {
     width: 56px;
     height: 30px;
-    margin: 4px 11px 26px 27px;
+    margin: 4px 11px 26px 24px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     font-weight: normal;
@@ -481,7 +481,7 @@ section.note {
 .writer_email {
     width: 45px;
     height: 30px;
-    margin: 24px 11px 26px 36px;
+    margin: 24px 11px 26px 24px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     font-weight: normal;
@@ -614,6 +614,12 @@ section.note {
     .app {
         width: 169px;
         height: 50px;
+    }
+    .writer_name {
+        margin-left: 27px;
+    }
+    .writer_email {
+        margin-left: 36px;
     }
 }
 
