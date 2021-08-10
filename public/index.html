@@ -4,54 +4,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>바닐라노트</title>
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.9.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.9.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.9.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.9.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.9.0/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.9.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.9.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.9.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.9.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.9.0/firebase-performance.js"></script>
+    <!--
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 </head>
 <body>
 <section class="banner" role="banner">
-    <div class = container>
-    <div class="column" id="first_1">
-        <img src="images/logo.png"
-            srcset="images/2x/logo@2x.png 2x,
+    <div class=container>
+        <div class="column" id="first_1">
+            <img src="images/logo.png"
+                 srcset="images/2x/logo@2x.png 2x,
                images/3x/logo@3x.png 3x"
-            class="logo"><p class="heading">쉽고 빠른 노트앱</p>
-        <p class="heading">바닐라노트</p>
-        <p class="subheading">라벨로 편리하게 노트를 관리하세요!</p>
-        <img src="images/img_main.png"
-             srcset="images/2x/img_main@2x.png 2x,
+                 class="logo">
+            <p class="heading">쉽고 빠른 노트앱</p>
+            <p class="heading">바닐라노트</p>
+            <p class="subheading">라벨로 편리하게 노트를 관리하세요!</p>
+            <img src="images/img_main.png"
+                 srcset="images/2x/img_main@2x.png 2x,
                 images/3x/img_main@3x.png 3x"
-             id="img_main_phone">
-        <img src="images/btn_google.png"
-             srcset="images/2x/btn_google@2x.png 2x,
+                 id="img_main_phone">
+            <img src="images/btn_google.png"
+                 srcset="images/2x/btn_google@2x.png 2x,
              images/3x/btn_google@3x.png 3x"
-             class="btn_google">
-        <img src="images/btn_app.png"
-             srcset="images/2x/btn_app@2x.png 2x,
+                 class="btn_google">
+            <img src="images/btn_app.png"
+                 srcset="images/2x/btn_app@2x.png 2x,
              images/3x/btn_app@3x.png 3x"
-             class="btn_app">
-    </div>
-    <div class="column" id="first_2">
-        <img src="images/img_main.png"
-            srcset="images/2x/img_main@2x.png 2x,
+                 class="btn_app">
+        </div>
+        <div class="column" id="first_2">
+            <img src="images/img_main.png"
+                 srcset="images/2x/img_main@2x.png 2x,
                 images/3x/img_main@3x.png 3x"
-            class="img_main">
-    </div>
+                 class="img_main">
+        </div>
     </div>
 </section>
 <section id="note" class="note">
-        <div class="cont_row">
-            <div class="box_new1 s4_5">
+    <div class="cont_row">
+        <div class="box_new1 s4_5">
                     <span class="s3">
-                    바닐라노트</span><span class="s4_5">는</span><br />
-                    이름, 컬러 라벨을 활용한 깔끔한 노트, 체크리스트 기능의 앱 입니다.<br />
-                    나만의 방식으로 라벨규칙을 만들어 다양하게 활용할 수 있으며 텍스트 라벨을 지정하면 탭으로 그룹화되어 볼 수 있습니다.<br />
-                    또한 컬러 라벨을 지정하면 컬러로 그룹화되어 볼 수 있습니다.<br />
-                    언제 어디서든지 생각나는 아이디어를 노트에 바로 입력하고 저장해보세요.<br />
-            </div>
-            <div class="box_new3">
-                <img src="images/logo_bg.png"
-                     srcset="images/2x/logo_bg@2x.png 2x, images/3x/logo_bg@3x.png 3x"
-                     class="logo_bg">
-            </div>
+                    바닐라노트</span><span class="s4_5">는</span><br/>
+            이름, 컬러 라벨을 활용한 깔끔한 노트, 체크리스트 기능의 앱 입니다.<br/>
+            나만의 방식으로 라벨규칙을 만들어 다양하게 활용할 수 있으며 텍스트 라벨을 지정하면 탭으로 그룹화되어 볼 수 있습니다.<br/>
+            또한 컬러 라벨을 지정하면 컬러로 그룹화되어 볼 수 있습니다.<br/>
+            언제 어디서든지 생각나는 아이디어를 노트에 바로 입력하고 저장해보세요.<br/>
         </div>
+        <div class="box_new3">
+            <img src="images/logo_bg.png"
+                 srcset="images/2x/logo_bg@2x.png 2x, images/3x/logo_bg@3x.png 3x"
+                 class="logo_bg">
+        </div>
+    </div>
 </section>
 <section class="third">
     <div class="third_row ">
@@ -63,9 +82,9 @@
             <p class="subtitle">다양한 그룹화로 노트를 관리해보세요.</p>
             <div class="third_images">
                 <img src="images/NewList_grid.png"
-                 srcset="images/2x/NewList_grid@2x.png 2x,
-                images/3x/NewList_grid@3x.png 3x",
-                class="third_img">
+                     srcset="images/2x/NewList_grid@2x.png 2x,
+                images/3x/NewList_grid@3x.png 3x" ,
+                     class="third_img">
             </div>
         </div>
         <div class="column third_space"></div>
@@ -76,7 +95,7 @@
             <div class="third_images">
                 <img src="images/NewList_2.png"
                      srcset="images/2x/NewList_2@2x.png 2x,
-                images/3x/NewList_2@3x.png 3x",
+                images/3x/NewList_2@3x.png 3x" ,
                      class="third_img">
             </div>
         </div>
@@ -88,7 +107,7 @@
             <div class="third_images">
                 <img src="images/NewList_3.png"
                      srcset="images/2x/NewList_3@2x.png 2x,
-                images/3x/NewList_3@3x.png 3x",
+                images/3x/NewList_3@3x.png 3x" ,
                      class="third_img">
             </div>
         </div>
@@ -100,7 +119,7 @@
             <div class="third_images">
                 <img src="images/D_NewList_grid.png"
                      srcset="images/2x/D_NewList_grid@2x.png 2x,
-                images/3x/D_NewList_grid@3x.png 3x",
+                images/3x/D_NewList_grid@3x.png 3x" ,
                      class="third_img">
             </div>
         </div>
@@ -116,7 +135,7 @@
             <div style="height: 24px;"></div>
             <img src="images/NewList_grid.png"
                  srcset="images/2x/NewList_grid@2x.png 2x,
-                images/3x/NewList_grid@3x.png 3x",
+                images/3x/NewList_grid@3x.png 3x" ,
                  class="slideshow_img">
         </div>
         <div class="mySlides fade">
@@ -126,7 +145,7 @@
             <div style="height: 24px;"></div>
             <img src="images/NewList_2.png"
                  srcset="images/2x/NewList_2@2x.png 2x,
-                images/3x/NewList_2@3x.png 3x",
+                images/3x/NewList_2@3x.png 3x" ,
                  class="slideshow_img">
         </div>
         <div class="mySlides fade">
@@ -136,7 +155,7 @@
             <div style="height: 24px;"></div>
             <img src="images/NewList_3.png"
                  srcset="images/2x/NewList_3@2x.png 2x,
-                images/3x/NewList_3@3x.png 3x",
+                images/3x/NewList_3@3x.png 3x" ,
                  class="slideshow_img">
         </div>
         <div class="mySlides fade">
@@ -146,7 +165,7 @@
             <div style="height: 24px;"></div>
             <img src="images/D_NewList_grid.png"
                  srcset="images/2x/D_NewList_grid@2x.png 2x,
-                images/3x/D_NewList_grid@3x.png 3x",
+                images/3x/D_NewList_grid@3x.png 3x" ,
                  class="slideshow_img">
         </div>
         <!-- Next and previous buttons -->
@@ -179,19 +198,22 @@
         <p class="fourth_subheading">바닐라노트에 대한 문의 또는 제안을 남겨주세요.</p>
         <p class="fourth_subheading">보다 나은 서비스를 제공하는 바닐라 노트가 되겠습니다.</p>
         <div class="Rectangle-295">
-            <form>
+            <form class="form">
                 <label for="writer_name" class="writer_name">작성자명</label>
                 <input id="writer_name" name="writer_name" class="fourth_input" required>
-                <br />
+                <br/>
                 <label for="writer_email" class="writer_email">E-mail</label>
                 <input id="writer_email" name="writer_email" class="fourth_input" required>
-                <br />
+                <br/>
                 <label for="form_content" class="form_content">내용</label>
                 <textarea id="form_content" name="form_content" class="fourth_textarea" required></textarea>
-                <br />
-                <button class="Rectangle-19">
+                <br/>
+                <button type="submit" class="Rectangle-19" onclick="onClick()">
                     <span class="form_done">작성완료</span>
                 </button>
+            </form>
+            <form id="demo-form">
+
             </form>
         </div>
         <div class="fourth_cont_row">
@@ -205,13 +227,16 @@
                  class="app">
         </div>
         <div style="height: 45px"></div>
-        <p class="footer"><span style="font-weight: bold;">바닐라브레인</span> 대표: 윤도선  사업자등록번호 511-60-00289</p>
+        <p class="footer"><span style="font-weight: bold;">바닐라브레인</span> 대표: 윤도선 사업자등록번호 511-60-00289</p>
         <p class="footer">Copyright © <span style="font-weight: bold;">VanillaBrain</span>. All rights reserved.</p>
     </div>
 </section>
 
-
-
+<!--<script>-->
+<!--    function onSubmit(token) {-->
+<!--        document.querySelector('.form').submit();-->
+<!--    }-->
+<!--</script>-->
 
 <script>
     var slideIndex = 1;
@@ -231,17 +256,75 @@
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
     }
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+            let app = firebase.app();
+            let features = [
+                'auth',
+                'database',
+                'firestore',
+                'functions',
+                'messaging',
+                'storage',
+                'analytics',
+                'remoteConfig',
+                'performance',
+            ].filter(feature => typeof app[feature] === 'function');
+            loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+            console.error(e);
+            loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+    });
+</script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script src="js/firebase.js"></script>
+<script src="../functions/index.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LegI-8bAAAAAJ_I8jnBVrsJ9hfFAOjtK1lSTy0e"></script>
+<script>
+    var PUBLIC_KEY = '6LegI-8bAAAAAJ_I8jnBVrsJ9hfFAOjtK1lSTy0e';
+    // private static final String SECRET_KEY = '6LegI-8bAAAAAO7AmPPd-tiZEnOR7d3qTKY-aaCf';
+    function onClick() {
+        // e.preventDefault();
+        grecaptcha.ready(function() {
+            grecaptcha.execute(PUBLIC_KEY, {action: 'submit'}).then(function(token) {
+                // Add your logic to submit to your backend server here.
+            });
+        });
+    }
+</script>
 </body>
