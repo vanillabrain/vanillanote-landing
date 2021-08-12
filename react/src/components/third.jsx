@@ -57,7 +57,7 @@ export const Third = (props) => {
                   <div className="column third_space_end"></div>
               </div>
 
-              <Slideshow />
+              <Slideshow data={props.data}/>
           </section>
     );
 }

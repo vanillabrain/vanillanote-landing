@@ -5,6 +5,8 @@ import D_NewList_grid from "../images/D_NewList_grid.png";
 import arrow_back from "../images/arrow_back.png";
 import arrow_forward from "../images/arrow_forward.png";
 
+import { Button } from "@material-ui/core";
+
 export const Slideshow = (props) => {
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -39,55 +41,54 @@ export const Slideshow = (props) => {
         slides[slideIndex - 1].style.display = "block";
         if (dots[slideIndex - 1] !== undefined)
         dots[slideIndex - 1].className += " active";
-        console.log("clicked");
     }
 
     return (
         <div>
             <div className="slideshow-container">
                 <div className="mySlides fade">
-                    <p className="title">다양한 라벨 기능</p>
-                    <p className="subtitle">텍스트 라벨, 컬러 라벨, 별표 라벨 등</p>
-                    <p className="subtitle">다양한 그룹화로 노트를 관리해보세요.</p>
+                    <p className="title">{props.data ? props.data.title1 : 'Loading'}</p>
+                    <p className="subtitle">{props.data ? props.data.subtitle1_1 : 'Loading'}</p>
+                    <p className="subtitle">{props.data ? props.data.subtitle1_2 : ''}</p>
                     <div style={{height: '24px'}}></div>
                     <img src={NewList_grid}
                     class="slideshow_img">
                     </img>
                 </div>
                 <div className="mySlides fade">
-                    <p className="title">편리한 체크리스트</p>
-                    <p className="subtitle">체크리스트의 추가, 삭제, 순서변경</p>
-                    <p className="subtitle">기능으로 리스트를 관리하세요.</p>
+                    <p className="title">{props.data ? props.data.title2 : 'Loading'}</p>
+                    <p className="subtitle">{props.data ? props.data.subtitle2_1 : 'Loading'}</p>
+                    <p className="subtitle">{props.data ? props.data.subtitle2_2 : ''}</p>
                     <div style={{height: '24px'}}></div>
                     <img src={NewList_2}
                     class="slideshow_img">
                     </img>
                 </div>
                 <div className="mySlides fade">
-                    <p className="title">텍스트 라벨 관리</p>
-                    <p className="subtitle">텍스트 라벨을 지정하면 탭으로</p>
-                    <p className="subtitle">그룹화하여 관리할 수 있습니다.</p>
+                    <p className="title">{props.data ? props.data.title3 : 'Loading'}</p>
+                    <p className="subtitle">{props.data ? props.data.subtitle3_1 : 'Loading'}</p>
+                    <p className="subtitle">{props.data ? props.data.subtitle3_2 : ''}</p>
                     <div style={{height: '24px'}}></div>
                     <img src={NewList_3}
                     class="slideshow_img">
                     </img>
                 </div>
                 <div className="mySlides fade">
-                    <p className="title">다크모드 지원</p>
-                    <p className="subtitle">다크모드 지원으로 설정을 통해</p>
-                    <p className="subtitle">자유롭게 사용할 수 있습니다.</p>
+                    <p className="title">{props.data ? props.data.title4 : 'Loading'}</p>
+                    <p className="subtitle">{props.data ? props.data.subtitle4_1 : 'Loading'}</p>
+                    <p className="subtitle">{props.data ? props.data.subtitle4_2 : ''}</p>
                     <div style={{height: '24px'}}></div>
                     <img src={D_NewList_grid}
                     class="slideshow_img">
                     </img>
                 </div>
 
-                <a className="prev" onClick={plusSlides(-1)}>
+                <a className="prev" onClick={() => plusSlides(-1)}>
                     <img src={arrow_back}
                          className="arrow_back">
                     </img>
                 </a>
-                <a className="next" onClick={plusSlides(1)}>
+                <a className="next" onClick={() => plusSlides(1)}>
                     <img src={arrow_forward}
                          className="arrow_forward">
                     </img>
@@ -96,10 +97,10 @@ export const Slideshow = (props) => {
             <div style={{height: '36px'}}></div>
 
             <div className="dots center">
-                <span className="dot" onClick={currentSlide(1)}/>
-                <span className="dot" onClick={currentSlide(2)}/>
-                <span className="dot" onClick={currentSlide(3)}/>
-                <span className="dot" onClick={currentSlide(4)}/>
+                <span className="dot" onClick={() => currentSlide(1)}/>
+                <span className="dot" onClick={() => currentSlide(2)}/>
+                <span className="dot" onClick={() => currentSlide(3)}/>
+                <span className="dot" onClick={() => currentSlide(4)}/>
             </div>
         </div>
     );

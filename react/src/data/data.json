@@ -39,7 +39,17 @@
     "subtitle4_2": "자유롭게 사용할 수 있습니다."
   },
   "Form": {
-
+    "title": "문의/제안 하기",
+    "subtitle1": "바닐라노트에 대한 문의 또는 제안을 남겨주세요.",
+    "subtitle2": "보다 나은 서비스를 제공하는 바닐라 노트가 되겠습니다.",
+    "writer_name": "작성자명",
+    "writer_email": "E-mail",
+    "content": "내용",
+    "footer1": "바닐라브레인",
+    "footer2": " 대표: 윤도선 사업자등록번호 511-60-00289",
+    "footer3": "Copyright © ",
+    "footer4": "VanillaBrain",
+    "footer5": ". All rights reserved."
   },
   "Services": [{
     "icon": "fa fa-wordpress",
