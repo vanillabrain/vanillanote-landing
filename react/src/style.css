@@ -133,7 +133,7 @@ img.img_main {
     .logo {
         width: 94px;
         height: 67px;
-        margin: 0 57px 54px 0;
+        margin: 0 calc(50vw - 200px) 54px 0;
         padding-top: 40px;
     }
     #img_main_phone {
@@ -178,7 +178,7 @@ img.img_main {
         width: 94px;
         height: 67px;
         padding-top: 40px;
-        margin: 0 0 54px calc(50vw - 597px);
+        margin: 0 calc(50vw - 300px) 54px calc(50vw - 597px);
     }
     #img_main_phone {
         display: none;

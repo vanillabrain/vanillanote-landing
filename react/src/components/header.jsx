@@ -5,7 +5,7 @@ import btn_google from "../images/btn_google.png";
 import btn_app from "../images/btn_app.png";
 import bgImg_tablet from "../images/bgImg_tablet.png";
 import bgImg from "../images/bgImg.png";
-import {makeStyles, Typography} from "@material-ui/core";
+import {Grid, makeStyles, Typography} from "@material-ui/core";
 import theme from "../theme";
 
 const useStyles = makeStyles({
@@ -23,6 +23,9 @@ const useStyles = makeStyles({
             height: "550px",
             padding: '0 201px 0 20px'
         },
+        [theme.breakpoints.up('lg')]: {
+            padding: '0 calc(50vw - 396px) 0 20px'
+        },
     },
     heading: {
        width: '237px',
@@ -37,7 +40,7 @@ const useStyles = makeStyles({
        textAlign: 'center',
        color: '#562a2a',
        [theme.breakpoints.up('sm')]: {
-           marginLeft: 'calc(50vw - 166px)',
+           margin: '0 0 0 calc(50vw - 166px)',
            width: '333px',
            height: '58px',
            fontSize: '40px',
@@ -46,10 +49,12 @@ const useStyles = makeStyles({
            textAlign: "left",
            fontSize: "50px",
            height: "68px",
-           margin: "0 calc(100vw - 987px) 0 154px",
+           // margin: "0 calc(100vw - 987px) 0 154px",
+           marginLeft: "154px",
        },
        [theme.breakpoints.up('lg')]: {
-           margin: '0 207px 0 calc(50vw - 443px)',
+           width: '333px',
+           margin: '0 0 0 calc(50vw - 443px)',
        }
    },
 });
@@ -58,9 +63,24 @@ export const Header = (props) => {
     const classes = useStyles();
 
     return (
-        <section className={classes.banner} role="banner">
-            <div className="container">
-                <div className="column" id="first_1">
+        <Grid
+            container
+            xs={12}
+            className={classes.banner} role="banner">
+            <Grid
+                item
+                container
+                // className="container"
+                direction="row"
+                justifyContent="space-between"
+                alignItems="flex-start"
+                xs={12}>
+                <Grid
+                    item
+                    container
+                    xs={12}
+                    md={8}
+                    id="first_1">
                     <img src={logo}
                          className="logo"
                          alt="logo">
@@ -77,13 +97,23 @@ export const Header = (props) => {
                     <img src={btn_app}
                          className="btn_app">
                     </img>
-                </div>
-                <div className="column" id="first_2">
+                </Grid>
+                <Grid
+                    item
+                    container
+                    direction="row"
+                    justifyContent="flex-end"
+                    alignItems="center"
+                    xs={12}
+                    md={4}
+                    // className="column"
+                    // id="first_2"
+                >
                     <img src={img_main}
                          className="img_main">
                     </img>
-                </div>
-            </div>
-        </section>
+                </Grid>
+            </Grid>
+        </Grid>
     );
 }
