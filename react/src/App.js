@@ -4,10 +4,8 @@ import { Header } from './components/header'
 import JsonData from './data/data.json'
 import {useEffect, useState} from "react";
 import {Note} from "./components/note";
-import {Third} from "./components/third";
+import {Third_row} from "./components/third_row";
 import {Form} from "./components/form";
-import { ThemeProvider } from "@material-ui/core";
-import theme from "./theme";
 
 function App() {
   const [landingPageData, setLandingPageData] = useState({})
@@ -16,14 +14,12 @@ function App() {
   }, [])
 
   return (
-      <ThemeProvider theme={theme}>
     <div className="App">
       <Header data={landingPageData.Header} />
       <Note data={landingPageData.Note} />
-        <Third data={landingPageData.Third} />
-        <Form data={landingPageData.Form} />
+      <Third_row data={landingPageData.Third} />
+      <Form data={landingPageData.Form} />
     </div>
-      </ThemeProvider>
   );
 }
 

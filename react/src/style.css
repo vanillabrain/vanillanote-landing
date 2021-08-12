@@ -2,20 +2,20 @@ body,html {
     margin:0;
     padding:0;
 }
-.banner {
-    background-image: url(images/bgImg_tablet.png);
-    background-position: center top;
-    background-repeat: no-repeat;
-    /*-moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;*/
-    height: 776px;
-    background-color: #fff7e3;
-    /*object-fit: contain;*/
-    padding: 0;
-    margin: 0;
-}
+/*.banner {*/
+/*    background-image: url(images/bgImg_tablet.png);*/
+/*    background-position: center top;*/
+/*    background-repeat: no-repeat;*/
+/*    !*-moz-background-size: cover;*/
+/*    -o-background-size: cover;*/
+/*    -webkit-background-size: cover;*/
+/*    background-size: cover;*!*/
+/*    height: 776px;*/
+/*    background-color: #fff7e3;*/
+/*    !*object-fit: contain;*!*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
 .column {
     padding: 0;
     margin: 0;
@@ -30,20 +30,20 @@ body,html {
     object-fit: contain;
     display: block;
 }
-.heading {
-    width: 237px;
-    height: 54px;
-    margin: 0 0 0 calc(50vw - 118px);
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.36;
-    letter-spacing: -1.47px;
-    text-align: center;
-    color: #562a2a;
-}
+/*.heading {*/
+/*    width: 237px;*/
+/*    height: 54px;*/
+/*    margin: 0 0 0 calc(50vw - 118px);*/
+/*    !*font-family: 'Noto Sans KR', sans-serif;*!*/
+/*    font-size: 36px;*/
+/*    font-weight: bold;*/
+/*    font-stretch: normal;*/
+/*    font-style: normal;*/
+/*    line-height: 1.36;*/
+/*    letter-spacing: -1.47px;*/
+/*    text-align: center;*/
+/*    color: #562a2a;*/
+/*}*/
 .subheading{
     width: 237px;
     height: 20px;
@@ -87,12 +87,12 @@ img.img_main {
     display: none;
 }
 @media (min-width: 414px) and (max-width: 1023px) {
-    .heading {
-        margin-left: calc(50vw - 166px);
-        width: 333px;
-        height: 58px;
-        font-size: 40px;
-    }
+    /*.heading {*/
+    /*    margin-left: calc(50vw - 166px);*/
+    /*    width: 333px;*/
+    /*    height: 58px;*/
+    /*    font-size: 40px;*/
+    /*}*/
     .logo {
         margin: 0 57px 23px max(calc(50vw - 282px), 20px);
     }
@@ -109,20 +109,21 @@ img.img_main {
     }
 }
 @media (min-width: 1024px) and (max-width: 1193px) {
-    .banner {
-        background-image: url(images/bgImg.png);
-        height: 550px;
-    }
+    /*.banner {*/
+    /*    background-image: url(images/bgImg.png);*/
+    /*    height: 550px;*/
+    /*}*/
     .container {
         display: inline-block;
     }
-    .heading {
-        width: 333px;
-        text-align: left;
-        font-size: 50px;
-        height: 68px;
-        margin: 0 calc(100vw - 987px) 0 154px;
-    }
+    /*.heading {*/
+    /*    width: 333px;*/
+    /*    text-align: left;*/
+    /*    font-size: 50px;*/
+    /*    height: 68px;*/
+    /*    margin: 0 calc(100vw - 987px) 0 154px;*/
+    /*padding: 0 201px 0 20px;*/
+    /*}*/
     .subheading{
         width: 333px;
         font-size: 22px;
@@ -138,9 +139,6 @@ img.img_main {
     #img_main_phone {
         display: none;
     }
-    .banner {
-        padding: 0 201px 0 20px;
-    }
     img.btn_google, img.btn_app {
         width: 169px;
         height: 50px;
@@ -153,17 +151,17 @@ img.img_main {
     }
 }
 @media (min-width: 1194px) {
-    .banner {
-        background-image: url(images/bgImg.png);
-        height: 550px;
-    }
-    .heading {
-        width: 333px;
-        margin: 0 207px 0 calc(50vw - 443px);
-        text-align: left;
-        font-size: 50px;
-        height: 68px;
-    }
+    /*.banner {*/
+    /*    background-image: url(images/bgImg.png);*/
+    /*    height: 550px;*/
+    /*}*/
+    /*.heading {*/
+    /*    width: 333px;*/
+    /*    margin: 0 207px 0 calc(50vw - 443px);*/
+    /*    text-align: left;*/
+    /*    font-size: 50px;*/
+    /*    height: 68px;*/
+    /*}*/
     .subheading{
         width: 333px;
         margin: 19px 0 42px calc(50vw - 443px);
@@ -296,7 +294,7 @@ section.note {
 }
 
 
-/*Third column*/
+/*Third_row column*/
 
 .third {
     height: 606px;

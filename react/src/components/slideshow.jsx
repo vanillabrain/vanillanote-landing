@@ -4,8 +4,8 @@ import NewList_3 from "../images/NewList_3.png";
 import D_NewList_grid from "../images/D_NewList_grid.png";
 import arrow_back from "../images/arrow_back.png";
 import arrow_forward from "../images/arrow_forward.png";
-
-import { Button } from "@material-ui/core";
+import { Slide } from './slide'
+import {Button} from "@material-ui/core";
 
 export const Slideshow = (props) => {
     var slideIndex = 1;
@@ -46,42 +46,30 @@ export const Slideshow = (props) => {
     return (
         <div>
             <div className="slideshow-container">
-                <div className="mySlides fade">
-                    <p className="title">{props.data ? props.data.title1 : 'Loading'}</p>
-                    <p className="subtitle">{props.data ? props.data.subtitle1_1 : 'Loading'}</p>
-                    <p className="subtitle">{props.data ? props.data.subtitle1_2 : ''}</p>
-                    <div style={{height: '24px'}}></div>
-                    <img src={NewList_grid}
-                    class="slideshow_img">
-                    </img>
-                </div>
-                <div className="mySlides fade">
-                    <p className="title">{props.data ? props.data.title2 : 'Loading'}</p>
-                    <p className="subtitle">{props.data ? props.data.subtitle2_1 : 'Loading'}</p>
-                    <p className="subtitle">{props.data ? props.data.subtitle2_2 : ''}</p>
-                    <div style={{height: '24px'}}></div>
-                    <img src={NewList_2}
-                    class="slideshow_img">
-                    </img>
-                </div>
-                <div className="mySlides fade">
-                    <p className="title">{props.data ? props.data.title3 : 'Loading'}</p>
-                    <p className="subtitle">{props.data ? props.data.subtitle3_1 : 'Loading'}</p>
-                    <p className="subtitle">{props.data ? props.data.subtitle3_2 : ''}</p>
-                    <div style={{height: '24px'}}></div>
-                    <img src={NewList_3}
-                    class="slideshow_img">
-                    </img>
-                </div>
-                <div className="mySlides fade">
-                    <p className="title">{props.data ? props.data.title4 : 'Loading'}</p>
-                    <p className="subtitle">{props.data ? props.data.subtitle4_1 : 'Loading'}</p>
-                    <p className="subtitle">{props.data ? props.data.subtitle4_2 : ''}</p>
-                    <div style={{height: '24px'}}></div>
-                    <img src={D_NewList_grid}
-                    class="slideshow_img">
-                    </img>
-                </div>
+                <Slide
+                    title={props.data ? props.data.title1 : "Loading"}
+                    subtitle1={props.data ? props.data.subtitle1_1 : "Loading"}
+                    subtitle2={props.data ? props.data.subtitle1_2 : ""}
+                    img={NewList_grid}
+                />
+                <Slide
+                    title={props.data ? props.data.title2 : "Loading"}
+                    subtitle1={props.data ? props.data.subtitle2_1 : "Loading"}
+                    subtitle2={props.data ? props.data.subtitle2_2 : ""}
+                    img={NewList_2}
+                />
+                <Slide
+                    title={props.data ? props.data.title3 : "Loading"}
+                    subtitle1={props.data ? props.data.subtitle3_1 : "Loading"}
+                    subtitle2={props.data ? props.data.subtitle3_2 : ""}
+                    img={NewList_3}
+                />
+                <Slide
+                    title={props.data ? props.data.title4 : "Loading"}
+                    subtitle1={props.data ? props.data.subtitle4_1 : "Loading"}
+                    subtitle2={props.data ? props.data.subtitle4_2 : ""}
+                    img={D_NewList_grid}
+                />
 
                 <a className="prev" onClick={() => plusSlides(-1)}>
                     <img src={arrow_back}
