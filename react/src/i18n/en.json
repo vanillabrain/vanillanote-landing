@@ -1,0 +1,29 @@
+{
+  "language": "en",
+  "Header": {
+    "title1": "Quick and Easy",
+    "title2": "Vanilla Note",
+    "subtitle": "Manage notes with labels!"
+  },
+  "Note": {
+    "paragraph1": "Vanilla Note ",
+    "paragraph2": "is",
+    "paragraph3": "A neat app with note and checklist functionalities that uses named and color labels.",
+    "paragraph4": "You can use it in a variety of ways by creating your own label patterns, and if you add text labels, you can view your notes grouped by tabs.",
+    "paragraph5": "If you add color labels, you can see your notes grouped by color.",
+    "paragraph6": "Enter ideas that come to mind anytime, anywhere, and save them right into your notes."
+  },
+  "Form": {
+    "title": "Inquiry/Suggestion",
+    "subtitle1": "Leave an inquiry or suggestion for Vanilla Note.",
+    "subtitle2": "We will strive to provide better service.",
+    "writer_name": "Name",
+    "writer_email": "E-mail",
+    "content": "Inquiry/Suggestion",
+    "footer1": "VanillaBrain",
+    "footer2": " Rep.: Dosun Yun  Reg. number: 511-60-00289",
+    "footer3": "Copyright © ",
+    "footer4": "VanillaBrain",
+    "footer5": ". All rights reserved."
+  }
+}

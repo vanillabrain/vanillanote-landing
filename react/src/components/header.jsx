@@ -51,9 +51,10 @@ const useStyles = makeStyles({
            height: "68px",
            // margin: "0 calc(100vw - 987px) 0 154px",
            marginLeft: "154px",
+           width: '500px',
        },
        [theme.breakpoints.up('lg')]: {
-           width: '333px',
+           width: '500px',
            margin: '0 0 0 calc(50vw - 443px)',
        }
    },

@@ -77,6 +77,7 @@ img.img_main {
     height: 363px;
     margin: 113px 0 0 0px;
     object-fit: contain;
+    display: none;
 }
 #img_main_phone {
     width: 228px;
@@ -149,6 +150,9 @@ img.img_main {
     #first_2 {
         display: inline-block;
     }
+    img.img_main {
+        display: inline;
+    }
 }
 @media (min-width: 1194px) {
     /*.banner {*/
@@ -193,11 +197,14 @@ img.img_main {
     #first_2 {
         display: inline-block;
     }
+    img.img_main {
+        display: inline;
+    }
 }
 
 /* second section */
 
-section.note {
+.note {
     height: 425px;
     color: #000000;
     display: flex;
@@ -243,7 +250,7 @@ section.note {
     display: none;
 }
 @media (min-width: 414px) and (max-width: 1023px) {
-    section.note {
+    .note {
         height: 295px;
         display: flex;
         flex-direction: column;
@@ -258,7 +265,7 @@ section.note {
     }
 }
 @media (min-width: 1024px) and (max-width: 1193px) {
-    section.note {
+    .note {
         height: 384px;
     }
     .box_new1 {
@@ -277,7 +284,7 @@ section.note {
     }
 }
 @media (min-width: 1194px) {
-    section.note {
+    .note {
         height: 384px;
     }
     .box_new3 {
@@ -351,6 +358,9 @@ section.note {
 .center {
     text-align: center;
 }
+.hide {
+    display: none;
+}
 @media (max-width: 1023px) {
     .third_row {
         display: none;
@@ -372,6 +382,9 @@ section.note {
     .third {
         height: 552px;
     }
+    .third_space {
+
+    }
 }
 @media (min-width: 1440px) {
     .third_space {
@@ -379,6 +392,12 @@ section.note {
     }
     .third_row {
         justify-content: center;
+    }
+    .third_space_end {
+        width: calc(50vw - 701px);
+    }
+    .hide {
+        display: inline;
     }
 }
 
@@ -395,7 +414,7 @@ section.note {
     align-items: center;
 }
 .fourth_heading {
-    width: 178px;
+    width: 300px;
     height: 36px;
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;

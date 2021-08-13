@@ -1,10 +1,11 @@
 import btn_google from "../images/btn_google.png";
 import btn_app from "../images/btn_app.png";
+import {Container, Grid} from "@material-ui/core";
 
 export const Form = (props) => {
     return (
         <section className="fourth">
-            <div className="cont_column">
+            <Grid container justifyContent="center" className="cont_column">
                 <p className="fourth_heading">{props.data ? props.data.title : 'Loading'}</p>
                 <div style={{height: '16px'}}></div>
                 <p className="fourth_subheading">{props.data ? props.data.subtitle1 : 'Loading'}</p>
@@ -39,7 +40,7 @@ export const Form = (props) => {
                 <div style={{height: '45px'}}/>
                 <p className="footer"><span className="bold">{props.data ? props.data.footer1 : 'Loading'}</span>{props.data ? props.data.footer2 : ''}</p>
                 <p className="footer">{props.data ? props.data.footer3 : ''}<span className="bold">{props.data ? props.data.footer4 : ''}</span>{props.data ? props.data.footer5 : ''}</p>
-            </div>
+            </Grid>
         </section>
     );
 }

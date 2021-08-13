@@ -1,0 +1,29 @@
+{
+  "language": "kr",
+  "Header": {
+    "title1": "쉽고 빠른 노트앱",
+    "title2": "바닐라노트",
+    "subtitle": "라벨로 편리하게 노트를 관리하세요!"
+  },
+  "Note": {
+    "paragraph1": "바닐라노트",
+    "paragraph2": "는",
+    "paragraph3": "이름, 컬러 라벨을 활용한 깔끔한 노트, 체크리스트 기능의 앱 입니다.",
+    "paragraph4": "나만의 방식으로 라벨규칙을 만들어 다양하게 활용할 수 있으며 텍스트 라벨을 지정하면 탭으로 그룹화되어 볼 수 있습니다.",
+    "paragraph5": "또한 컬러 라벨을 지정하면 컬러로 그룹화되어 볼 수 있습니다.",
+    "paragraph6": "언제 어디서든지 생각나는 아이디어를 노트에 바로 입력하고 저장해보세요."
+  },
+  "Form": {
+    "title": "문의/제안 하기",
+    "subtitle1": "바닐라노트에 대한 문의 또는 제안을 남겨주세요.",
+    "subtitle2": "보다 나은 서비스를 제공하는 바닐라 노트가 되겠습니다.",
+    "writer_name": "작성자명",
+    "writer_email": "E-mail",
+    "content": "내용",
+    "footer1": "바닐라브레인",
+    "footer2": " 대표: 윤도선 사업자등록번호 511-60-00289",
+    "footer3": "Copyright © ",
+    "footer4": "VanillaBrain",
+    "footer5": ". All rights reserved."
+  }
+}
