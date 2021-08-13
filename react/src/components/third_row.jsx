@@ -18,6 +18,9 @@ export const Third_row = (props) => {
 
     const {data, className, ...rest } = props;
 
+    const space = () => {
+
+    }
     return (
           <Grid
               className="third"
@@ -28,7 +31,7 @@ export const Third_row = (props) => {
                   justifyContent="space-between"
                   className="third_row ">
                   <div className="column third_space_end"></div>
-                  <div className="column third_space hide"></div>
+                  {/*<div className="column third_space hide"></div>*/}
                   <div className="third_row">
                   {data.map((item, index) => (
                       <div>
@@ -38,7 +41,7 @@ export const Third_row = (props) => {
                           subtitle2={item.subtitle2}
                           img={images[index]}//{NewList_grid}
                       />
-                      <div className="column third_space"></div>
+                          {index !== 3 && <div className="column third_space"></div>}
                       </div>
                   ))}
                   </div>

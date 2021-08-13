@@ -383,7 +383,7 @@ img.img_main {
         height: 552px;
     }
     .third_space {
-
+        width: calc(20.67vw - 212px);
     }
 }
 @media (min-width: 1440px) {
