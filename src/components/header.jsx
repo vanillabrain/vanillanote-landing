@@ -28,9 +28,9 @@ const useStyles = makeStyles({
         },
     },
     heading: {
-       width: '237px',
+       width: '277px',
        height: '54px',
-       margin: '0 0 0 calc(50vw - 118px)',
+       margin: '0 0 0 calc(50vw - 138px)',
        fontSize: '36px',
        fontWeight: 'bold',
        fontStretch: 'normal',

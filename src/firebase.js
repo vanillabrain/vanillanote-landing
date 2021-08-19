@@ -2,12 +2,12 @@
 import firebase from "firebase/app";
 
 //grab a form
-const form = document.querySelector('.form');
+//const form = document.querySelector('.form');
 
 //grab inputs
-const inputEmail = form.querySelector('#writer_email');
-const writerName = form.querySelector('#writer_name');
-const content = form.querySelector('#form_content');
+const inputEmail = document.querySelector('#writer_email');
+const writerName = document.querySelector('#writer_name');
+const content = document.querySelector('#form_content');
 
 //config your firebase push
 const config = {
@@ -32,9 +32,9 @@ function firebasePush(email, writer_name, content) {
     //push itself
     var mailsRef = firebase.database().ref('queries').push().set(
         {
-            writerName: writer_name.value,
-            mail: email.value,
-            content: content.value
+            writerName: "testing",//writer_name.value,
+            mail: "testing",//email.value,
+            content: "testing",//content.value
         }
     );
 

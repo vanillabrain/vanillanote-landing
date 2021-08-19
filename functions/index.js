@@ -11,7 +11,7 @@ const gmailPassword = "vanillanoteapp123";//functions.config().gmail.pass;
 admin.initializeApp();
 
 //creating function for sending emails
-var goMail = function (text) {
+var goMail = function (text1, text2, text3) {
 
 //transporter is a way to send your emails
     const transporter = nodemailer.createTransport({
@@ -27,9 +27,9 @@ var goMail = function (text) {
     const mailOptions = {
         from: gmailEmail, // sender address
         to: 'hello@vanillabrain.com', // list of receivers
-        subject: 'Vanilla Note App', // Subject line
-        text: text, // plain text body
-        html: text // html body
+        subject: 'Vanilla Note App 문의', // Subject line
+        text: text1 + text2 + text3, // plain text body
+        html: `Sender Name: ${text1} <br /> Sender Email Address: ${text2} <br /> Content: ${text3}`
     };
 
     //this is callback function to return status to firebase console
@@ -54,8 +54,8 @@ exports.onDataAdded = functions.database.ref('/queries/{sessionId}').onCreate(fu
     var text1 = createdData.writerName;
     var text3 = createdData.content;
     var text = "Sender Name: " + text1
-        + "\n\n              Sender Email Address: "
-    + text2 + "\n\n               Content: " + text3;
+        + "Sender Email Address: "
+    + text2 + "Content: " + text3;
     //here we send new data using function for sending emails
-    goMail(text);
+    goMail(text1, text2, text3);
 });

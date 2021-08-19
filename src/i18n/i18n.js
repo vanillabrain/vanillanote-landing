@@ -23,7 +23,6 @@ i18n
     .init({
         resources,
         fallbackLng: 'en', // default language
-        debug: true,
         load: 'languageOnly',
         keySeparator: false, // we do not use keys in form messages.welcome
         interpolation: {
