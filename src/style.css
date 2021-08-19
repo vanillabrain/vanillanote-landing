@@ -488,7 +488,7 @@ img.img_main {
 .writer_name {
     width: 56px;
     height: 30px;
-    margin: 4px 11px 26px 24px;
+    margin: 4px 11px 26px 17px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     font-weight: normal;
@@ -502,7 +502,7 @@ img.img_main {
 .writer_email {
     width: 45px;
     height: 30px;
-    margin: 24px 11px 26px 24px;
+    margin: 24px 11px 26px 17px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     font-weight: normal;
@@ -517,7 +517,7 @@ img.img_main {
     width: calc(100vw - 80px); /*657*/
     height: 36px;
     /*gap: 10px;*/
-    margin: 0 0 12px 23px;
+    margin: 0 0 12px 17px;
     /*padding: 10px 10px 8px 10px;*/
     border-radius: 4px;
     border: solid 1px #cecccb;
@@ -525,7 +525,7 @@ img.img_main {
 .form_content {
     width: 28px;
     height: 30px;
-    margin: 12px 11px 0 24px;
+    margin: 12px 11px 0 17px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
     font-weight: normal;
@@ -540,7 +540,7 @@ img.img_main {
     width: calc(100vw - 80px); /*657*/
     height: 240px;
     /*gap: 10px;*/
-    margin: 0 0 0 23px;
+    margin: 0 0 0 17px;
     /*padding: 10px 10px 8px 10px;*/
     border-radius: 4px;
     border: solid 1px #cecccb;
@@ -570,6 +570,12 @@ img.img_main {
 .bold {
     font-weight: bold;
 }
+input::placeholder {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+textarea::placeholder {
+    font-family: 'Noto Sans KR', sans-serif;
+}
 @media (min-width: 414px) and (max-width: 1023px) {
     .Rectangle-295 {
         width: min(786px, calc(100vw - 100px));
@@ -578,23 +584,23 @@ img.img_main {
         padding: 25px 0 30px;
     }
     .writer_name {
-        margin: 0 min(667px, calc(100vw - 219px)) 0 65px;
+        margin: 0 min(667px, calc(100vw - 219px)) 0 53px;
     }
     .writer_email {
-        margin: 0 min(667px, calc(100vw - 219px)) 0 65px;
+        margin: 0 min(667px, calc(100vw - 219px)) 0 53px;
     }
     .form_content {
-        margin: 0 min(667px, calc(100vw - 219px)) 0 65px;
+        margin: 0 min(667px, calc(100vw - 219px)) 0 53px;
     }
     .fourth_input {
         width: min(683px, calc(100vw - 213px));
-        margin: 0 78px 12px 65px;
+        margin: 0 78px 12px 53px;
     }
     .fourth_textarea {
         width: min(683px, calc(100vw - 213px));
         height: 234px;
         /*gap: 10px;*/
-        margin: 0 78px 0 65px;
+        margin: 0 78px 0 53px;
     }
     .Rectangle-19 {
         margin: 24px 0 0 min(333px, calc(50vw - 110px));
@@ -602,32 +608,34 @@ img.img_main {
 }
 @media (min-width: 1024px) {
     .Rectangle-295 {
-        width: 786px;
+        width: 753px;
         height: 430px;
         margin: 30px 0 110px;
-        padding: 35px 0 40px 0;
+        padding: 35px 35px 40px 0;
     }
     .fourth_input {
-        width: 655px;
+        width: 656px;
         margin: 0 0 20px 0;
     }
     .fourth_textarea {
-        width: 655px; /*657*/
+        width: 656px; /*657*/
         height: 234px;
         /*gap: 10px;*/
         margin: 0;
     }
     .Rectangle-19 {
-        margin: 30px 333px 0 333px;
+        margin: 30px 298px 0 333px;
     }
     .fourth_subheading {
         height: 22px;
         font-size: 15px;
     }
     .form_content {
-        margin: 12px 11px 0 53px;
+        margin: 12px 11px 0 0;
+
     }
     .footer {
+        width: 450px;
         font-size: 14px;
     }
     .google {
@@ -643,7 +651,12 @@ img.img_main {
         margin-left: 27px;
     }
     .writer_email {
-        margin-left: 36px;
+        margin-left: 27px;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }
 

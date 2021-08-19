@@ -1,4 +1,5 @@
 'use strict';
+import firebase from "firebase/app";
 
 //grab a form
 const form = document.querySelector('.form');

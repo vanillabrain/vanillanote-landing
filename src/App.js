@@ -13,11 +13,13 @@ import { thirdEN } from './data/third_EN';
 import { useTranslation } from 'react-i18next';
 
 function App() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     var JsonData;
     var third;
   const [landingPageData, setLandingPageData] = useState({})
-    if (t('language') === 'kr') {
+    console.log(navigator.language);
+
+    if (navigator.language === 'ko') {
         JsonData = JsonDataKR;
         third = thirdKR;
     }
