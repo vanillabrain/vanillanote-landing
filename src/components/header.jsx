@@ -86,17 +86,20 @@ export const Header = (props) => {
                          className="logo"
                          alt="logo">
                     </img>
-                    <Typography className={classes.heading}>{props.data ? props.data.title1 : 'Loading'}</Typography>
-                    <Typography className={classes.heading}>{props.data ? props.data.title2 : 'Loading'}</Typography>
+                    <Typography variant="h1" className={classes.heading}>{props.data ? props.data.title1 : 'Loading'}</Typography>
+                    <Typography variant="h1" className={classes.heading}>{props.data ? props.data.title2 : 'Loading'}</Typography>
                     <p className="subheading">{props.data ? props.data.subtitle : 'Loading'}</p>
                     <img src={img_main}
-                         id="img_main_phone">
+                         id="img_main_phone"
+                    alt="Vanilla Note Home">
                     </img>
                     <img src={btn_google}
-                         className="btn_google">
+                         className="btn_google"
+                    alt="Get It On Google Play">
                     </img>
                     <img src={btn_app}
-                         className="btn_app">
+                         className="btn_app"
+                    alt="Download on the App Store">
                     </img>
                 </Grid>
                 <Grid

@@ -11,6 +11,7 @@ import {Form} from "./components/form";
 import { thirdKR } from './data/third_KR';
 import { thirdEN } from './data/third_EN';
 import { useTranslation } from 'react-i18next';
+import {Helmet} from "react-helmet";
 
 function App() {
     const { t, i18n } = useTranslation();
@@ -33,6 +34,29 @@ function App() {
 
   return (
     <div className="App">
+        <Helmet>
+            <title>
+                VanillaNote - Notepad, Checklist, Color Labels
+            </title>
+            <meta name="description" content="VanillaNote is a neat note/checklist app that uses word labels and color labels.
+Enter ideas that come into mind anytime, anywhere, and save them right into your notes.
+Also, you can create your own label rules and use them in various ways.
+Text labels allow you to view notes grouped by tabs.
+Color labels allow you to view notes grouped by color.
+- When you're finished using the notepad, click the back button to save your note."
+            data-react-helmet="true" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://vanillanoteapp.web.app" />
+            {/*<meta property="og:image" content="./images/logo.png" />*/}
+            <meta property="og:title" content="VanillaNote - Notepad, Checklist, Color Labels" />
+            <meta property="og:description" content="VanillaNote is a neat note/checklist app that uses word labels and color labels.
+Enter ideas that come into mind anytime, anywhere, and save them right into your notes.
+Also, you can create your own label rules and use them in various ways.
+Text labels allow you to view notes grouped by tabs.
+Color labels allow you to view notes grouped by color.
+- When you're finished using the notepad, click the back button to save your note."
+                  data-react-helmet="true" />
+        </Helmet>
       <Header data={landingPageData.Header} />
       <Note data={landingPageData.Note} />
       <Third_row data={third} />

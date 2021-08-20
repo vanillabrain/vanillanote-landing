@@ -6,7 +6,8 @@ export const Third_Column = (props) => {
             <p className="subtitle">{props.subtitle2}</p>
             <div className="third_images">
                 <img src={props.img}
-                     className="third_img">
+                     className="third_img"
+                     alt="">
                 </img>
             </div>
         </div>
