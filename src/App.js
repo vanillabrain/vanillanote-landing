@@ -12,6 +12,7 @@ import { thirdKR } from './data/third_KR';
 import { thirdEN } from './data/third_EN';
 import { useTranslation } from 'react-i18next';
 import {Helmet} from "react-helmet";
+import Head from 'next/head'
 
 function App() {
     const { t, i18n } = useTranslation();
@@ -34,7 +35,7 @@ function App() {
 
   return (
     <div className="App">
-        <Helmet>
+        <Head>
             <title>
                 VanillaNote - Notepad, Checklist, Color Labels
             </title>
@@ -56,7 +57,7 @@ Text labels allow you to view notes grouped by tabs.
 Color labels allow you to view notes grouped by color.
 - When you're finished using the notepad, click the back button to save your note."
                   data-react-helmet="true" />
-        </Helmet>
+        </Head>
       <Header data={landingPageData.Header} />
       <Note data={landingPageData.Note} />
       <Third_row data={third} />
