@@ -1,11 +1,12 @@
 import {Slideshow} from "./slideshow";
-import NewList_grid from "../images/NewList_grid.png";
-import NewList_2 from "../images/NewList_2.png";
-import NewList_3 from "../images/NewList_3.png";
-import D_NewList_grid from "../images/D_NewList_grid.png";
+import NewList_grid from "../public/images/NewList_grid.png";
+import NewList_2 from "../public/images/NewList_2.png";
+import NewList_3 from "../public/images/NewList_3.png";
+import D_NewList_grid from "../public/images/D_NewList_grid.png";
 import {Third_Column} from "./third_column";
 import {Container, Grid} from "@material-ui/core";
 import {Slide} from "./slide";
+import {Dynamic} from "./dynamic-no-ssr";
 
 const images = [
     NewList_grid,
@@ -15,12 +16,8 @@ const images = [
 ];
 
 export const Third_row = (props) => {
-
     const {data, className, ...rest } = props;
 
-    const space = () => {
-
-    }
     return (
           <Grid
               className="third"
@@ -47,7 +44,7 @@ export const Third_row = (props) => {
                   </div>
                   <div className="column third_space_end"></div>
               </Grid>
-              <Slideshow data={props.data}/>
+              <Slideshow data={data}/>
         </Grid>
     );
 }

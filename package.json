@@ -11,8 +11,10 @@
     "firebase": "^8.9.1",
     "i18next": "^20.4.0",
     "i18next-browser-languagedetector": "^6.1.2",
+    "jsdom": "^17.0.0",
     "next": "^11.1.0",
     "next-i18next": "^8.6.0",
+    "next-images": "^1.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
@@ -22,7 +24,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start"
   },
   "eslintConfig": {
@@ -44,6 +46,13 @@
     ]
   },
   "devDependencies": {
-    "i18next-http-backend": "^1.3.0"
+    "@next/eslint-plugin-next": "^11.1.0",
+    "i18next-http-backend": "^1.3.0",
+    "mocha-jsdom": "^2.0.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
   }
 }

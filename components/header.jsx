@@ -1,16 +1,16 @@
 // import ParticlesBg from "particles-bg";
-import logo from "../images/logo.png";
-import img_main from "../images/img_main.png";
-import btn_google from "../images/btn_google.png";
-import btn_app from "../images/btn_app.png";
-import bgImg_tablet from "../images/bgImg_tablet.png";
-import bgImg from "../images/bgImg.png";
+import logo from "../public/images/logo.png";
+import img_main from "../public/images/img_main.png";
+import btn_google from "../public/images/btn_google.png";
+import btn_app from "../public/images/btn_app.png";
 import {Grid, makeStyles, Typography} from "@material-ui/core";
-import theme from "../theme";
+import theme from "./theme";
+import {useTranslation} from "next-i18next";
+import Image from 'next/image'
 
 const useStyles = makeStyles({
     banner: {
-        backgroundImage: `url(${bgImg_tablet})`,
+        backgroundImage: "url('/images/bgImg_tablet.png')",
         backgroundPosition: "center top",
         backgroundRepeat: "no-repeat",
         backgroundSize: 'cover',
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
         padding: "0",
         margin: "0",
         [theme.breakpoints.up('md')]: {
-            backgroundImage:`url(${bgImg})`,
+            backgroundImage: "url('/images/bgImg.png')",
             height: "550px",
             padding: '0 201px 0 20px'
         },
@@ -63,6 +63,8 @@ const useStyles = makeStyles({
 export const Header = (props) => {
     const classes = useStyles();
 
+    const { t } = useTranslation('common')
+
     return (
         <Grid
             container
@@ -81,26 +83,31 @@ export const Header = (props) => {
                     container
                     xs={12}
                     md={8}
-                    id="first_1">
-                    <img src={logo}
-                         className="logo"
+                    className="first_2">
+                    <div className="logo">
+                    <Image src={logo}
                          alt="logo">
-                    </img>
-                    <Typography variant="h1" className={classes.heading}>{props.data ? props.data.title1 : 'Loading'}</Typography>
-                    <Typography variant="h1" className={classes.heading}>{props.data ? props.data.title2 : 'Loading'}</Typography>
-                    <p className="subheading">{props.data ? props.data.subtitle : 'Loading'}</p>
-                    <img src={img_main}
-                         id="img_main_phone"
+                    </Image>
+                    </div>
+                    <Typography variant="h1" className={classes.heading}>{t('title1')}</Typography>
+                    <Typography variant="h1" className={classes.heading}>{t('title2')}</Typography>
+                    <p className="subheading">{t('subtitle')}</p>
+                    <Grid className="img_main_phone">
+                    <Image src={img_main}
+                           className="img_main_phone"
                     alt="Vanilla Note Home">
-                    </img>
-                    <img src={btn_google}
-                         className="btn_google"
+                    </Image>
+                    </Grid>
+                    <div className="btn_google">
+                    <Image src={btn_google}
                     alt="Get It On Google Play">
-                    </img>
-                    <img src={btn_app}
-                         className="btn_app"
+                    </Image>
+                    </div>
+                    <div className="btn_app">
+                    <Image src={btn_app}
                     alt="Download on the App Store">
-                    </img>
+                    </Image>
+                    </div>
                 </Grid>
                 <Grid
                     item
@@ -113,9 +120,10 @@ export const Header = (props) => {
                     // className="column"
                     // id="first_2"
                 >
-                    <img src={img_main}
-                         className="img_main">
-                    </img>
+                    <div className="img_main">
+                    <Image src={img_main}>
+                    </Image>
+                    </div>
                 </Grid>
             </Grid>
         </Grid>

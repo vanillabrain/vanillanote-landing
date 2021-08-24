@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const Third_Column = (props) => {
     return (
         <div className="column">
@@ -5,10 +7,11 @@ export const Third_Column = (props) => {
             <p className="subtitle">{props.subtitle1}</p>
             <p className="subtitle">{props.subtitle2}</p>
             <div className="third_images">
-                <img src={props.img}
-                     className="third_img"
+                <div className="third_img">
+                <Image src={props.img}
                      alt="">
-                </img>
+                </Image>
+                </div>
             </div>
         </div>
     );

@@ -58,33 +58,33 @@ body,html {
     text-align: center;
     color: #562a2a;
 }
-img.btn_google {
+.btn_google {
     width: 135px;
     height: 40px;
     flex-grow: 0;
     margin: 0 8px 0 calc(50vw - 139px);
     object-fit: contain;
 }
-img.btn_app {
+.btn_app {
     width: 135px;
     height: 40px;
     flex-grow: 0;
     margin: 0;
     object-fit: contain;
 }
-img.img_main {
+.img_main {
     width: 279px;
     height: 363px;
     margin: 113px 0 0 0px;
     object-fit: contain;
     display: none;
 }
-#img_main_phone {
+.img_main_phone {
     width: 228px;
     height: 297px;
     margin: 0 0 50px calc(50vw - 114px);
 }
-#first_2 {
+.first_2 {
     display: none;
 }
 @media (min-width: 414px) and (max-width: 1023px) {
@@ -102,10 +102,11 @@ img.img_main {
         font-size: 16px;
         margin: 9px 0 32px calc(50vw - 166px);
     }
-    #img_main_phone {
+    .img_main_phone {
+        width: 228px;
         margin: 0 calc(50vw - 114px) 62px calc(50vw - 114px);
     }
-    img.btn_google {
+    .btn_google {
         margin: 0 8px 0 calc(50vw - 139px);
     }
 }
@@ -137,20 +138,20 @@ img.img_main {
         margin: 0 calc(50vw - 200px) 54px 0;
         padding-top: 40px;
     }
-    #img_main_phone {
+    .img_main_phone {
         display: none;
     }
-    img.btn_google, img.btn_app {
+    .btn_google, .btn_app {
         width: 169px;
         height: 50px;
     }
-    img.btn_google {
+    .btn_google {
         margin-left: 154px;
     }
-    #first_2 {
+    .first_2 {
         display: inline-block;
     }
-    img.img_main {
+    .img_main {
         display: inline;
     }
 }
@@ -172,7 +173,7 @@ img.img_main {
         font-size: 22px;
         text-align: left;
     }
-    img.btn_google {
+    .btn_google {
         margin-left: calc(50vw - 443px);
     }
     .container {
@@ -184,20 +185,20 @@ img.img_main {
         padding-top: 40px;
         margin: 0 calc(50vw - 300px) 54px calc(50vw - 597px);
     }
-    #img_main_phone {
+    .img_main_phone {
         display: none;
     }
     .banner {
         padding: 0 201px 0 20px;
     }
-    img.btn_google, img.btn_app {
+    .btn_google, .btn_app {
         width: 169px;
         height: 50px;
     }
-    #first_2 {
+    .first_2 {
         display: inline-block;
     }
-    img.img_main {
+    .img_main {
         display: inline;
     }
 }
@@ -273,8 +274,6 @@ img.img_main {
     }
     .box_new3 {
         margin-right: calc(50vw - 376px);
-    }
-    .box_new3 {
         display: block;
     }
     .s4_5 {
@@ -706,13 +705,13 @@ img.arrow_forward, img.arrow_back {
     height: 14px;
     width: 14px;
     margin: 0 8px;
-    background-image: url("./images/ic_off.png");
+    background-image: url("../public/images/ic_off.png");
     border-radius: 50%;
     display: inline-block;
     /*transition: background-color 0.6s ease;*/
 }
 .active {
-    background-image: url("./images/ic_on.png");
+    background-image: url("../public/images/ic_on.png");
 }
 /* Fading animation */
 .fade {

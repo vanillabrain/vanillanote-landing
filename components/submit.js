@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import firebase from "firebase";
+import {useTranslation} from "next-i18next";
 //import {Form} from "./form";
+import { withTranslation } from "next-i18next";
+import { Translation } from 'react-i18next';
 
-export default class Submit extends Component {
+class Submit extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -121,30 +124,38 @@ export default class Submit extends Component {
 
     render() {
         return (
-            <form className="form">
-            <div>
-                <label htmlFor="writer_name" className="writer_name">{this.props.data ? this.props.data.writer_name : 'Loading'}</label>
-                <input id="writer_name" name="writer_name" className="fourth_input" value={this.state.writer_name} onChange={evt => this.updateInputValue(evt)}
-                       required placeholder={this.props.data ? this.props.data.hint_writer_name : 'Loading'}>
-                </input>
-            </div>
-        <div>
-            <label htmlFor="writer_email" className="writer_email">{this.props.data ? this.props.data.writer_email : 'Loading'}</label>
-            <input id="writer_email" name="writer_email" className="fourth_input" required value={this.state.writer_email} onChange={evt => this.updateInputValue2(evt)}
-                   placeholder={this.props.data ? this.props.data.hint_writer_email : 'Loading'}>
-            </input>
-        </div>
-        <div>
-            <label htmlFor="form_content" className="form_content">{this.props.data ? this.props.data.content : 'Loading'}</label>
-            <textarea id="form_content" name="form_content" className="fourth_textarea" value={this.state.content} onChange={evt => this.updateInputValue3(evt)}
-                      required placeholder={this.props.data ? this.props.data.hint_content : 'Loading'}></textarea>
-        </div>
-            <div ref={this.wrapperRef}>
-            <button type="submit" className="Rectangle-19" onClick="onClick()">
-                <span className="form_done">{this.props.data ? this.props.data.form_done : 'Loading'}</span>
-            </button>
-            </div>
-            </form>
+            <Translation>
+                {
+                    (t, {i18n}) =>
+                        <form className="form">
+                            <div>
+                                <label htmlFor="writer_name" className="writer_name">{t('writer_name')}</label>
+                                <input id="writer_name" name="writer_name" className="fourth_input"
+                                       value={this.state.writer_name} onChange={evt => this.updateInputValue(evt)}
+                                       required placeholder={t('hint_writer_name')}>
+                                </input>
+                            </div>
+                            <div>
+                                <label htmlFor="writer_email" className="writer_email">{t('writer_email')}</label>
+                                <input id="writer_email" name="writer_email" className="fourth_input" required
+                                       value={this.state.writer_email} onChange={evt => this.updateInputValue2(evt)}
+                                       placeholder={t('hint_writer_email')}>
+                                </input>
+                            </div>
+                            <div>
+                                <label htmlFor="form_content" className="form_content">{t('content')}</label>
+                                <textarea id="form_content" name="form_content" className="fourth_textarea"
+                                          value={this.state.content} onChange={evt => this.updateInputValue3(evt)}
+                                          required placeholder={t('hint_content')}></textarea>
+                            </div>
+                            <div ref={this.wrapperRef}>
+                                <button type="submit" className="Rectangle-19" onClick="onClick()">
+                                    <span className="form_done">{t('form_done')}</span>
+                                </button>
+                            </div>
+                        </form>
+                }
+            </Translation>
         );
     }
 }
@@ -152,3 +163,5 @@ export default class Submit extends Component {
 Submit.propTypes = {
     children: PropTypes.element.isRequired,
 };
+
+export default Submit;

@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const Slide = (props) => {
     return (
         <div className="mySlides fade">
@@ -5,11 +7,11 @@ export const Slide = (props) => {
             <p className="subtitle">{props.subtitle1}</p>
             <p className="subtitle">{props.subtitle2}</p>
             <div style={{height: '24px'}}></div>
-            <img src={props.img}//{`url(${bgImg_tablet})`}
-                 alt=""
-                 className="slideshow_img"
-            >
-            </img>
+            <div className="slideshow_img">
+            <Image src={props.img}//{`url(${bgImg_tablet})`}
+                 alt="">
+            </Image>
+            </div>
         </div>
     );
 }

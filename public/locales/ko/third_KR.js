@@ -1,7 +1,7 @@
-import NewList_grid from "../images/NewList_grid.png";
-import NewList_2 from "../images/NewList_2.png";
-import NewList_3 from "../images/NewList_3.png";
-import D_NewList_grid from "../images/D_NewList_grid.png";
+import NewList_grid from "../../images/NewList_grid.png";
+import NewList_2 from "../../images/NewList_2.png";
+import NewList_3 from "../../images/NewList_3.png";
+import D_NewList_grid from "../../images/D_NewList_grid.png";
 
 export const thirdKR = [
     {

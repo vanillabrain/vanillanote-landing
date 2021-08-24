@@ -1,12 +1,15 @@
-import NewList_grid from "../images/NewList_grid.png";
-import NewList_2 from "../images/NewList_2.png";
-import NewList_3 from "../images/NewList_3.png";
-import D_NewList_grid from "../images/D_NewList_grid.png";
-import arrow_back from "../images/arrow_back.png";
-import arrow_forward from "../images/arrow_forward.png";
-import { Slide } from './slide'
-import {Button, Grid} from "@material-ui/core";
+import NewList_grid from "../public/images/NewList_grid.png";
+import NewList_2 from "../public/images/NewList_2.png";
+import NewList_3 from "../public/images/NewList_3.png";
+import D_NewList_grid from "../public/images/D_NewList_grid.png";
+import arrow_back from "../public/images/arrow_back.png";
+import arrow_forward from "../public/images/arrow_forward.png";
+import { Slide } from './slide.jsx'
+import Image from 'next/image'
 //import PropTypes from 'prop-types';
+// const jsdom = require("jsdom");
+// const { JSDOM } = jsdom;
+// global.document = new JSDOM(``, {url: "http://localhost"}).window.document;
 
 const images = [
     NewList_grid,
@@ -14,6 +17,14 @@ const images = [
     NewList_3,
     D_NewList_grid
 ];
+
+function SafeHydrate({ children }) {
+    return (
+        <div suppressHydrationWarning>
+            {typeof window === 'undefined' ? null : children}
+        </div>
+    )
+}
 
 export const Slideshow = (props) => {
     var slideIndex = 1;
@@ -54,6 +65,7 @@ export const Slideshow = (props) => {
     const {data, className, ...rest } = props;
 
     return (
+        <SafeHydrate>
         <div>
             <div className="slideshow-container">
                 {data.map((item, index) => (
@@ -65,14 +77,16 @@ export const Slideshow = (props) => {
                     />
                 ))}
                 <a className="prev" onClick={() => plusSlides(-1)}>
-                    <img src={arrow_back}
-                         className="arrow_back">
-                    </img>
+                    <div className="arrow_back">
+                    <Image src={arrow_back}>
+                    </Image>
+                    </div>
                 </a>
                 <a className="next" onClick={() => plusSlides(1)}>
-                    <img src={arrow_forward}
-                         className="arrow_forward">
-                    </img>
+                    <div className="arrow_forward">
+                    <Image src={arrow_forward}>
+                    </Image>
+                    </div>
                 </a>
             </div>
             <div style={{height: '36px'}}></div>
@@ -84,6 +98,7 @@ export const Slideshow = (props) => {
                 <span className="dot" onClick={() => currentSlide(4)}/>
             </div>
         </div>
+        </SafeHydrate>
     );
 }
 
