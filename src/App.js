@@ -47,7 +47,6 @@ Color labels allow you to view notes grouped by color.
             data-react-helmet="true" />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://vanillanoteapp.web.app" />
-            {/*<meta property="og:image" content="./images/logo.png" />*/}
             <meta property="og:title" content="VanillaNote - Notepad, Checklist, Color Labels" />
             <meta property="og:description" content="VanillaNote is a neat note/checklist app that uses word labels and color labels.
 Enter ideas that come into mind anytime, anywhere, and save them right into your notes.

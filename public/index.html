@@ -25,7 +25,26 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <title>React App</title>
+    <title>
+      VanillaNote - Notepad, Checklist, Color Labels
+    </title>
+    <meta name="description" content="VanillaNote is a neat note/checklist app that uses word labels and color labels.
+Enter ideas that come into mind anytime, anywhere, and save them right into your notes.
+Also, you can create your own label rules and use them in various ways.
+Text labels allow you to view notes grouped by tabs.
+Color labels allow you to view notes grouped by color.
+- When you're finished using the notepad, click the back button to save your note."
+          data-react-helmet="true" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vanillanoteapp.web.app" />
+    <meta property="og:title" content="VanillaNote - Notepad, Checklist, Color Labels" />
+    <meta property="og:description" content="VanillaNote is a neat note/checklist app that uses word labels and color labels.
+Enter ideas that come into mind anytime, anywhere, and save them right into your notes.
+Also, you can create your own label rules and use them in various ways.
+Text labels allow you to view notes grouped by tabs.
+Color labels allow you to view notes grouped by color.
+- When you're finished using the notepad, click the back button to save your note."
+          data-react-helmet="true" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -40,5 +59,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LegI-8bAAAAAJ_I8jnBVrsJ9hfFAOjtK1lSTy0e"></script>
+    <script>
+      var PUBLIC_KEY = '6LegI-8bAAAAAJ_I8jnBVrsJ9hfFAOjtK1lSTy0e';
+      // private static final String SECRET_KEY = '6LegI-8bAAAAAO7AmPPd-tiZEnOR7d3qTKY-aaCf';
+      function onClick() {
+        // e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute(PUBLIC_KEY, {action: 'submit'}).then(function(token) {
+            // Add your logic to submit to your backend server here.
+          });
+        });
+      }
+    </script>
   </body>
 </html>
