@@ -483,7 +483,6 @@ img.img_main {
 .fourth_cont_row {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .writer_name {
     width: 56px;

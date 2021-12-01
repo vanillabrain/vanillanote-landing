@@ -5,7 +5,7 @@ import btn_google from "../images/btn_google.png";
 import btn_app from "../images/btn_app.png";
 import bgImg_tablet from "../images/bgImg_tablet.png";
 import bgImg from "../images/bgImg.png";
-import {Grid, makeStyles, Typography} from "@material-ui/core";
+import {Button, Grid, makeStyles, Typography} from "@material-ui/core";
 import theme from "../theme";
 
 const useStyles = makeStyles({
@@ -93,14 +93,18 @@ export const Header = (props) => {
                          id="img_main_phone"
                     alt="Vanilla Note Home">
                     </img>
+                  <a href="https://play.google.com/store/apps/details?id=com.vanillabrain.vanillanote&hl=en_US&gl=US">
                     <img src={btn_google}
                          className="btn_google"
                     alt="Get It On Google Play">
                     </img>
+                  </a>
+                  <Button onClick={() => alert(props.data.iOS ?? "The iOS version is being prepared and will be released soon.")}>
                     <img src={btn_app}
                          className="btn_app"
                     alt="Download on the App Store">
                     </img>
+                  </Button>
                 </Grid>
                 <Grid
                     item

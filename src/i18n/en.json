@@ -3,7 +3,8 @@
   "Header": {
     "title1": "Quick and Easy",
     "title2": "Vanilla Note",
-    "subtitle": "Manage notes with labels!"
+    "subtitle": "Manage notes with labels!",
+    "iOS": "The iOS version is being prepared and will be released soon."
   },
   "Note": {
     "paragraph1": "Vanilla Note ",
@@ -28,6 +29,7 @@
     "footer2": " Rep.: Dosun Yun  Reg. number: 511-60-00289",
     "footer3": "Copyright © ",
     "footer4": "VanillaBrain",
-    "footer5": ". All rights reserved."
+    "footer5": ". All rights reserved.",
+    "iOS": "The iOS version is being prepared and will be released soon."
   }
 }

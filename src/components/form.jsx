@@ -1,6 +1,6 @@
 import btn_google from "../images/btn_google.png";
 import btn_app from "../images/btn_app.png";
-import {Box, Container, Grid, InputLabel, makeStyles, TextField} from "@material-ui/core";
+import {Box, Button, Container, Grid, InputLabel, makeStyles, TextField} from "@material-ui/core";
 import Submit from "./submit";
 import React, { useState, useRef } from 'react';
 
@@ -17,12 +17,16 @@ export const Form = (props) => {
                         </Submit>
                 </div>
                 <div className="fourth_cont_row">
+                    <a href="https://play.google.com/store/apps/details?id=com.vanillabrain.vanillanote&hl=en_US&gl=US">
                     <img src={btn_google}
                          className="google">
                     </img>
-                        <img src={btn_app}
+                    </a>
+                    <Button onClick={() => alert(props.data.iOS ?? "The iOS version is being prepared and will be released soon.")}>
+                    <img src={btn_app}
                              className="app">
                         </img>
+                    </Button>
                 </div>
                 <div style={{height: '45px'}}/>
                 <p className="footer"><span className="bold">{props.data ? props.data.footer1 : 'Loading'}</span>{props.data ? props.data.footer2 : ''}</p>

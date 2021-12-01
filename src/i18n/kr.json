@@ -3,7 +3,8 @@
   "Header": {
     "title1": "쉽고 빠른 노트앱",
     "title2": "바닐라노트",
-    "subtitle": "라벨로 편리하게 노트를 관리하세요!"
+    "subtitle": "라벨로 편리하게 노트를 관리하세요!",
+    "iOS": "론칭을 준비 중입니다. 조금만 기다려주세요."
   },
   "Note": {
     "paragraph1": "바닐라노트",
@@ -28,6 +29,7 @@
     "footer2": " 대표: 윤도선 사업자등록번호 511-60-00289",
     "footer3": "Copyright © ",
     "footer4": "VanillaBrain",
-    "footer5": ". All rights reserved."
+    "footer5": ". All rights reserved.",
+    "iOS": "론칭을 준비 중입니다. 조금만 기다려주세요."
   }
 }
