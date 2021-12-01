@@ -167,7 +167,7 @@ img.img_main {
     /*    height: 68px;*/
     /*}*/
     .subheading{
-        width: 333px;
+        min-width: 333px;
         margin: 19px 0 42px calc(50vw - 443px);
         font-size: 22px;
         text-align: left;

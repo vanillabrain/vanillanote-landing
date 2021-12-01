@@ -5,7 +5,7 @@ import btn_google from "../images/btn_google.png";
 import btn_app from "../images/btn_app.png";
 import bgImg_tablet from "../images/bgImg_tablet.png";
 import bgImg from "../images/bgImg.png";
-import {Button, Grid, makeStyles, Typography} from "@material-ui/core";
+import {Button, Grid, makeStyles, Typography, Box} from "@material-ui/core";
 import theme from "../theme";
 
 const useStyles = makeStyles({
@@ -54,7 +54,7 @@ const useStyles = makeStyles({
            width: '500px',
        },
        [theme.breakpoints.up('lg')]: {
-           width: '500px',
+           minWidth: '500px',
            margin: '0 0 0 calc(50vw - 443px)',
        }
    },
@@ -76,11 +76,11 @@ export const Header = (props) => {
                 justifyContent="space-between"
                 alignItems="flex-start"
                 xs={12}>
-                <Grid
-                    item
-                    container
-                    xs={12}
-                    md={8}
+                <Box
+                    // item
+                    // xs={12}
+                    // md={8}
+                  width='500px'
                     id="first_1">
                     <img src={logo}
                          className="logo"
@@ -93,6 +93,7 @@ export const Header = (props) => {
                          id="img_main_phone"
                     alt="Vanilla Note Home">
                     </img>
+                  <div style={{minWidth: 'calc(50vw - 97px)', display: 'flex'}}>
                   <a href="https://play.google.com/store/apps/details?id=com.vanillabrain.vanillanote&hl=en_US&gl=US">
                     <img src={btn_google}
                          className="btn_google"
@@ -105,7 +106,8 @@ export const Header = (props) => {
                     alt="Download on the App Store">
                     </img>
                   </Button>
-                </Grid>
+                  </div>
+                </Box>
                 <Grid
                     item
                     container
